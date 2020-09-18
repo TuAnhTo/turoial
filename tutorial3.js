@@ -76,3 +76,36 @@ alert(day + "/" + month + "/" + year);
 Bước 9: Cài đặt thêm phương thức setDate() để thiết đặt lại ngày, tháng, năm cho đối tượng MyDate và phương thức toString() để trả về chuỗi ngày tháng năm theo định dạng dd/mm/yyyy.
 
 Bước 10: Gọi 2 phương thức vừa xây dựng.
+mã hoàn chỉnh là : 
+
+
+
+let MyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.setDay = function (day) {
+            this.day = day;
+        };
+        this.setMonth = function (month) {
+            this.month = month;
+        };
+        this.setYear = function (year) {
+            this.year = year;
+        }
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+    };
+    let date = new MyDate(2, 2, 2007);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    console.log(day +"/"+ month +"/"+ year);
